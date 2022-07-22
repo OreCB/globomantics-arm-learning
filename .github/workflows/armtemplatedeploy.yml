@@ -22,7 +22,7 @@ jobs:
         uses: Azure/arm-deploy@v1
         with:
           scope:  subscription
-          subscriptionId: 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
+          subscriptionId: 4262dd0d-121d-4296-a424-2293c40980e6
           region: Canada Central
           template: ./arm-templates/resourcegroup.json
           deploymentName: rg-githubactions
