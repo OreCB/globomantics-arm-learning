@@ -18,8 +18,12 @@ jobs:
         with: 
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy Resource Group rg-githubactions with AZ CLI
-        uses: Azure/cli@v1
-        with: 
-          inlinescript: |
-            az deployment sub create --location "Canada Central" --template-file ./arm-templates/resourcegroup.json
+      - name: Deploy  Resource Group rg-githubactions
+        uses: Azure/arm-deploy@v1
+        with:
+          scope:  subscription
+          subscriptionId: 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
+          region: Canada Central
+          template: ./arm-templates/resourcegroup.json
+          deploymentName: rg-githubactions
+
