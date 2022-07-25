@@ -41,7 +41,7 @@ jobs:
           parameters: 
             storageAccountName=globostgore002
             location="Canada East"
-            ./arm-templates/storageaccount.parameters.json
+            sku="Standard_LRS"
           deploymentMode: incremental
 
       - run: echo ${{ steps.storageAccountDeploy.outputs.BlobUri }}
