@@ -85,4 +85,4 @@ jobs:
           template: ./bicep-templates/virtualnetwork.bicep
           parameters:
             vNetPrefix=biceparmdeploy
-            location=${{ env.location }}
+            location="${{ env.location }}"
